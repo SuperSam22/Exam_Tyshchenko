@@ -1,0 +1,17 @@
+<form [formGroup]="form" (ngSubmit)="edit()">
+    <div>
+        <label for="id">
+            Id apartment
+        </label>
+        <input id="id" class="form-control mt-1" type="text" formControlName="id"/>
+    </div>
+    <div>
+        <label for="category" class="pt-3">
+            Category
+        </label>
+        <select id="category" class="form-select mt-1" formControlName="category">
+            <option *ngFor="let type of categories" [ngValue]="type">{{ categoryEnum[type] }}</option>
+        </select>
+    </div>
+    <button class="btn btn-primary mt-3" type="submit">Change category</button>
+</form>

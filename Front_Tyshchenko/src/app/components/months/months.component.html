@@ -1,0 +1,16 @@
+<h4>Months</h4>
+
+<table class="table mt-4">
+    <thead>
+        <th>Month</th>
+        <th>Value</th>
+        <th>Percentage</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let monthTotal of monthsTotal">
+            <td>{{ monthTotal.month | date: 'MMMM yyyy' }}</td>
+            <td>{{ monthTotal.value | number: '0.2-2' }}</td>
+            <td>{{ monthTotal.percent | number: '0.2-2' }}%</td>
+        </tr>
+    </tbody>
+</table>
